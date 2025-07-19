@@ -1,0 +1,318 @@
+{% extends 'app.html' %}
+
+{% block content %}
+
+<script>
+$(document).ready(function(){
+
+	$.fn.alert = (status, msg) => {
+		let alert_type = "info";
+		if (status >= 200 && status < 300) {
+			alert_type = "success";
+		} else if (status >= 400 && status < 600) {
+			alert_type = "failure";
+		}
+		let alert_anchor = document.getElementById("alerts");
+		let alert = document.createElement("div");
+		alert.className = `alert ${alert_type}`;
+		alert.innerText = `${msg}`;
+		$("#alerts").append(alert);
+	};
+
+	$.fn.format_date = (date) => {
+		const options = {
+			weekday: 'long', // Full weekday name (e.g., Monday)
+			month: 'long',   // Full month name (e.g., January)
+			year: 'numeric', // Numeric year (e.g., 2025)
+			day: 'numeric'   // Numeric day (e.g., 1)
+		};
+
+		// Format the date to get the weekday, month, year, and day
+		const formatted = date.toLocaleDateString('en-US', options);
+
+		// Get the day from the formatted date
+		const day = date.getDate();
+
+		// Determine the ordinal suffix
+		const suffix = (n) => {
+			if (n > 3 && n < 21) return 'th'; // Special case for 11th, 12th, 13th, etc.
+			switch (n % 10) {
+				case 1: return 'st';
+				case 2: return 'nd';
+				case 3: return 'rd';
+				default: return 'th';
+			}
+		};
+		const day_ordinal = `${day}${suffix(day)}`;
+		return formatted.replace(day, day_ordinal);
+	}
+
+	const day_map = {
+		"monday": 1,
+		"tuesday": 2,
+		"wednesday": 3,
+		"thursday": 4,
+		"friday": 5,
+		"saturday": 6,
+		"sunday": 7
+	};
+
+	$.fn.date_formatter = (season, week, day) => {
+		console.log(season, week, day);
+		const first_day = new Date(season, 0, 1);
+		const first_monday = first_day.getDay() === 0 ? 1 : (8 - first_day.getDay()) % 7;
+		first_day.setDate(first_day.getDate() + first_monday);
+		first_day.setDate(first_day.getDate() + (week - 1) * 7 + day);
+		return $.fn.format_date(first_day);
+	};
+
+	$.fn.time_formatter = (start, end) => {
+		let start_pm = false;
+		let end_pm = false;
+		if (start > 12) {
+			start -= 12;
+			start_pm = true;
+		}
+
+		if (end > 12) {
+			end -= 12;
+			end_pm = true;
+		}
+
+		start = Math.floor(start)
+		end = Math.floor(end)
+
+		let start_half = "30";
+		let end_half = "30";
+		if (typeof start === 'number' && start === Math.floor(start)) {
+			start_half = "00";
+		}
+		if (typeof end === 'number' && end === Math.floor(end)) {
+			end_half = "00";
+		}
+
+		let start_suffix = (start_pm) ? "pm" : "am";
+		let end_suffix = (end_pm) ? "pm" : "am";
+	
+		return `${start}:${start_half}${start_suffix} - ${end}:${end_half}${end_suffix}`;
+	};
+
+	$.fn.generate_game = (game) => {
+		let date_str = $.fn.date_formatter(game.season, game.week, game.day);
+		let time_str = $.fn.time_formatter(game.start, game.end);
+		let gameEl = document.createElement("div");
+		gameEl.className = "game";
+		let date = document.createElement("div");
+		date.className = "date cell";
+		date.innerText = `${date_str}`;
+		let time = document.createElement("div");
+		time.className = "time cell";
+		time.innerText = `${time_str}`;
+		let league = document.createElement("div");
+		league.className = "league cell";
+		league.innerText = `${game.league}`;
+		let team1 = document.createElement("div");
+		team1.className = "team1 cell";
+		team1.innerText = `${game.team1Name}`;
+		let team2 = document.createElement("div");
+		team2.className = "team2 cell";
+		team2.innerText = `${game.team2Name}`;
+		let location = document.createElement("div");
+		location.className = "location cell";
+		location.innerText = `${game.location}`;
+		gameEl.appendChild(date);
+		gameEl.appendChild(time);
+		gameEl.appendChild(league);
+		gameEl.appendChild(team1);
+		gameEl.appendChild(team2);
+		gameEl.appendChild(location);
+		$("#schedule-render").append(gameEl);
+	}
+
+	$.fn.test = (status, msg) => {
+		let testEl = document.createElement("div");
+		testEl.className = `test-status ${status}`;
+		testEl.innerText = msg;
+		$("#test-header").html(testEl);
+	}
+
+	$("[data-role=scheduler]").each(function(){
+		$(this).click(function () {
+			let schedule_case = $(this).attr("data-case");
+			$.ajax({
+				url: "/schedule",
+				method: "GET",
+				data: {"case": schedule_case},
+				success: function(e) {
+					console.log("Schedule successfully retrieved");
+					document.getElementById("schedule-render").innerText = "";
+					for (let d of e.data) {
+						console.log(d);
+						$.fn.generate_game(d);
+					}
+					$.fn.alert(e.status, e.msg);
+					$.fn.test(e.test_status, e.test_msg);
+				},
+				failure: function(e) {
+					console.log("Server Error");
+					document.getElementById("schedule-render").innerText = `Failed to retrieve schedule: ${JSON.stringify(e.data)}`;
+				}
+			});
+		});
+	});
+});
+</script>
+
+<style>
+div.bttn {
+	background-color:crimson;
+	color:white;
+	margin:3px;
+	font-weight:bold;
+	border-radius:5px;
+	padding:6px 10px;
+	display:inline;
+	box-shadow:var(--shadow);
+}
+
+div.bttn:hover {
+	transition:0.2s ease-in;
+	background-color:rgb(252, 128, 153);
+}
+
+div.alert {
+	border-radius: 5px;
+	padding:6px 10px;
+	box-shadow:var(--shadow);
+	animation: fadeOutAnimation 2s forwards;
+	animation-delay: 1s;
+}
+
+@keyframes fadeOutAnimation {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+div.alert.success {
+	background-color:rgb(178, 255, 178);
+	color:rgb(35, 182, 35);
+}
+
+div.alert.failure {
+	background-color:rgb(255, 175, 175);
+	color:rgb(224, 46, 46);
+}
+
+div.game {
+	width:100%;
+	padding:10px;
+	box-shadow:var(--shadow);
+	margin:3px;
+	border-radius:5px;
+	display:grid;
+	grid-template-columns: repeat(8, 1fr);  /* 3 equal columns */
+}
+
+div.game-header {
+	margin:3px;
+	grid-template-columns: repeat(8, 1fr);  /* 3 equal columns */
+	display:grid;
+}
+
+div.game-header > * {
+	font-weight:bold;
+}
+
+div.game:hover {
+	background-color:rgba(245, 245, 245, 1);
+}
+
+div.game .cell {
+	display:inline;
+	padding:10px;
+}
+
+div.game .cell:not(:nth-last-child(1)) {
+	border-right:1px solid rgba(200, 200, 200, 1);
+}
+
+div.game .date, div.game-header .date {
+	grid-column: span 1;
+}
+
+div.game .time, div.game-header .time {
+	grid-column: span 1;
+}
+
+div.game .team1, div.game-header .team1 {
+	grid-column: span 2;
+}
+
+div.game .team2, div.game-header .team2 {
+	grid-column: span 2;
+}
+
+div.game .league, div.game-header .league {
+	grid-column: span 1;
+}
+
+div.game .location, div.game-header .location {
+	grid-column: span 1;
+}
+
+#test-header {
+	margin:3px;
+}
+
+.test-status {
+	border-radius: 5px;
+	padding:6px 10px;
+	box-shadow:var(--shadow);
+	transition:0.2s ease-in;
+	margin:5px;
+}
+
+.test-status.success {
+	background-color:rgb(178, 255, 178);
+	color:rgb(35, 182, 35);
+}
+
+.test-status.failure {
+	background-color:rgb(255, 175, 175);
+	color:rgb(224, 46, 46);
+}
+</style>
+
+<h1>Schedule</h1>
+
+<ul>
+<div data-role="scheduler" class="bttn" data-case="case1">Case 1</div>
+<div data-role="scheduler" class="bttn" data-case="case2">Case 2</div>
+<div data-role="scheduler" class="bttn" data-case="case3">Case 3</div>
+<div data-role="scheduler" class="bttn" data-case="case4">Case 4</div>
+<div data-role="scheduler" class="bttn" data-case="case5">Case 5</div>
+<div data-role="scheduler" class="bttn" data-case="case6">Case 6</div>
+<div data-role="scheduler" class="bttn" data-case="case7">Case 7</div>
+<div data-role="scheduler" class="bttn" data-case="case8">Case 8</div>
+<div data-role="scheduler" class="bttn" data-case="generated">Generated</div>
+</ul>
+
+<div id="test-header"></div>
+
+<div style="margin-top:50px;">
+	<div class="game-header">
+		<div class="date">Date</div>
+		<div class="time">Time</div>
+		<div class="league">League</div>
+		<div class="team1">Team 1</div>
+		<div class="team2">Team 2</div>
+		<div class="location">Location</div>
+	</div>
+	<div id="schedule-render">
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+	python3 -m pytest ./core/test/*
+else
+	CASE=$1
+	python3 -m pytest ./core/test/test_${CASE}.py
+fi

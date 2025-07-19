@@ -1,0 +1,50 @@
+Meeting Minutes
+Meeting Title: Product Backlog Defined
+Date: December 4, 2024
+Duration: 1 hour
+ 
+Attendees:
+•	Prajwal 
+•	Poorna
+•	Haifeng Huang
+•	Wan Wang
+ 
+Agenda:
+1.	Roles and Responsibilities Defined
+2.	Explanation of Scrum Process and Meetings
+3.	Task Assignment for Next Day
+ 
+1. Roles and Responsibilities:
+•	Product Owner (PO): Poorna
+o	Responsible for defining the product backlog and prioritizing tasks.
+•	Scrum Master (SM): Prajwal
+o	Ensures the Scrum process is being followed, facilitates meetings, and removes blockers for the team.
+•	Developers:
+o	All 4 team members are developers, responsible for delivering the work.
+ 
+2. Explanation of Scrum Process and Meetings:
+•	Sprint Planning: A meeting where the team will decide what to work on for the upcoming sprint. Typically happens at the start of each sprint.
+•	Daily Scrum: A short (15-minute) stand-up meeting every day to discuss progress, impediments, and plan for the next 24 hours.
+•	Sprint Review: Held at the end of each sprint to demonstrate the work completed during the sprint.
+•	Sprint Retrospective: A meeting for the team to reflect on the sprint and discuss what went well and what can be improved.
+
+Meeting Dates & Durations:
+•	Daily Scrum: Every day at 10 AM (15 minutes)
+•	Sprint Review: Every end of sprint (duration: 1 hour)
+•	Sprint Retrospective: At the end of each sprint (duration: 30 minutes)
+ 
+3. Task Assignment for Next Day:
+•	Set up the Git repository 
+- Ensure all team members have access and permissions to the repo.
+•	Set up shared documents for the backlog. 
+-	Create a document (Google Docs or Confluence) to maintain the product backlog and track progress.
+•	Set up code, install and run the program
+-	Ensure to install all the code and setup the dev environment. Execute the code and come up with the process to build the scheduling algorithm.
+ 
+Next Steps:
+•	Confirm Git repository access and set up for all team members.
+•	Create a shared backlog document and outline the initial set of features or tasks.
+•	Look at the source code and decide up on the technical tasks to proceed forward with the implementation
+ 
+Minutes prepared by Prajwal
+

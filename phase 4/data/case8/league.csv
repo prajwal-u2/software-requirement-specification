@@ -1,0 +1,4 @@
+leagueId,sportId,leagueTypeId,leagueName,leagueSize,seasonStart,seasonEnd,numberOfGames,seasonYear
+1,4,1,Platinum League,24,12,23,14,2024
+2,4,1,Obsidian League,32,12,28,24,2024
+3,4,1,Diamond League,48,16,30,20,2024

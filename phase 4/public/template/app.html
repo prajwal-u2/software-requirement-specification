@@ -1,0 +1,43 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/asset/css/main.css" type="text/css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<title>{% block title %}Sports{% endblock %}</title>
+</head>
+
+<style>
+:root {
+	--shadow: 0 2px 4px 0 rgba(0,0,0,0.05),0 6px 20px 0 rgba(0,0,0,0.05);
+}
+
+#alerts {
+	position:fixed;
+	right:100px;
+	bottom:100px;
+}
+</style>
+
+<body>
+	<header>
+		<div style="float:left;"><b><a href="/">SPORTS</a></b></div>
+		<nav>
+			<span><a href="/login-page">Login</a></span>
+		</nav>
+	</header>
+
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	<div id="alerts">
+	</div>
+
+</body>
+
+</html>

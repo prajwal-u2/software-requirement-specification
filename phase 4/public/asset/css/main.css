@@ -1,0 +1,31 @@
+html,
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Tahoma', sans-serif;
+	height:100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+header {
+	height: 50px;
+	background-color: crimson;
+	color: white;
+	width:100%;
+	display:block;
+	padding:5px 20px;
+	font-size:25px;
+	line-height:40px;
+}
+
+nav {
+	float:right;
+}
+
+main {
+	padding:25px;
+	height:100%;
+}

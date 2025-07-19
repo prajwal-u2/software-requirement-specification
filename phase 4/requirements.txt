@@ -1,0 +1,7 @@
+uvicorn
+fastapi
+pandas
+jinja2
+python-multipart
+faker
+pytest

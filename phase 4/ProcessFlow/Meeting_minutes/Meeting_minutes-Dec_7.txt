@@ -1,0 +1,44 @@
+Meeting Title: Daily Scrum Meeting 2 - Task Updates and Blocker Resolution
+Date: December 7, 2024
+Duration: 15 minutes
+
+Attendees:
+•	Prajwal
+•	Poorna
+•	Haifeng Huang
+•	Wan Wang
+
+Agenda:
+•	Task Updates
+•	Blocker Resolution
+•	Progress Check
+•	Design Document Updates
+
+Meeting Discussion:
+
+•	Task Updates:
+o	The team updated the status of their tasks.
+o	The entire team is focused on designing and developing the scheduling algorithm.
+o	However, the team encountered a blocker: there was confusion about how the test cases are checking the number of matches.
+
+•	Blockers:
+o	The main blocker was the unclear requirement on how the test cases validate the number of matches.
+o	To resolve this, the team brainstormed to find a solution. After no progress, the issue was escalated and an email was sent to the professors for clarification and support.
+o	In addition, the team identified some missing elements in the design document. Specifically, a new Sports class was added to the design, along with extra parameters that were previously omitted in the diagrams.
+
+•	Current Work Focus:
+o	The team continues to design and implement the scheduling algorithm.
+o	Additionally, they are refining the design document to include the new class and additional parameters.
+
+Action Items:
+•	Follow up with the professors on the test case clarification.
+•	Continue working on the scheduling algorithm design and implementation.
+•	Update the design document with the new Sports class and added parameters.
+•	Regularly update the sprint backlog and task tracking spreadsheet.
+
+Next Steps:
+•	Each team member will continue working on their tasks related to the scheduling algorithm and design document updates.
+•	The team will evaluate progress and address any blockers in the next daily scrum.
+
+Minutes Prepared by: Prajwal
+

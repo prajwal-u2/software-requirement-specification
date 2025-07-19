@@ -1,0 +1,46 @@
+Meeting Title: Daily Scrum Meeting 1 - Task Updates and Progress Check
+Date: December 6, 2024
+Duration: 15 minutes
+ 
+- Attendees:
+  	Prajwal
+  	Poorna
+  	Haifeng Huang
+  	Wan Wang
+ 
+- Agenda:
+  	Task Updates
+  	Sprint Backlog Completion
+  	Progress Check
+  	Identifying Blockers
+ 
+- Meeting Discussion:
+
+- Task Updates:
+  	All team members provided an update on their current tasks.
+  	The sprint backlog was completed with the required changes and written in the correct user story format.
+  	Each user story was reviewed, and the task assignments were confirmed.
+  	Sprint Backlog Completion:
+  	The sprint backlog was reviewed in detail.
+  	User stories were properly written, and acceptance criteria were defined.
+  	The backlog was updated based on previous refinements during the sprint planning.
+
+- Blockers:
+  	There were no blockers reported by any team member.
+  	The team is currently working smoothly, with no impediments to progress.
+  	Current Work Focus:
+  	The team has started implementing the scheduling algorithm.
+  	Simultaneously, they are trying to understand the algorithm deeply and document its structure, logic, and any constraints for future reference.
+   
+- Action Items:
+  	Continue working on the scheduling algorithm and keep progressing with the design and implementation.
+  	Regularly update the sprint backlog and status of tasks in the task tracking spreadsheet.
+  	Review the algorithm documentation and refine it as the development progresses.
+  	Prepare for next daily scrum to evaluate progress and address any potential blockers.
+ 
+- Next Steps:
+  	Each team member will continue working on the tasks related to understanding, designing, and implementing the scheduling algorithm.
+  	The progress will be evaluated in the next daily scrum, and adjustments will be made if necessary.
+ 
+Minutes Prepared by: Prajwal
+

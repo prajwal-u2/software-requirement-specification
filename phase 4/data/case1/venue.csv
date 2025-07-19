@@ -1,0 +1,5 @@
+venueId,region,name,field,d1Start,d1End,d2Start,d2End,d3Start,d3End,d4Start,d4End,d5Start,d5End,d6Start,d6End,d7Start,d7End,seasonStart,seasonEnd,seasonYear
+1,West,Venue 1,1,17,20,17,20,17,20,17,20,17,20,17,20,17,20,12,20,2024
+2,West,Venue 1,2,17,20,17,20,17,20,17,20,17,20,17,20,17,20,12,20,2024
+3,West,Venue 1,3,17,20,17,20,17,20,17,20,17,20,17,20,17,20,12,20,2024
+4,West,Venue 1,4,17,20,17,20,17,20,17,20,17,20,17,20,17,20,12,20,2024

@@ -1,0 +1,58 @@
+Meeting Title: Sprint Retrospective
+Date: December 10, 2024
+Duration: 45 minutes
+
+Attendees:
+• Prajwal
+• Poorna
+• Haifeng Huang
+• Wan Wang
+
+Agenda:
+• Discuss what went well
+• Discuss what could be improved
+• Action Plan for Next Sprint
+
+Meeting Discussion:
+
+What Went Well:
+
+The team demonstrated effective collaboration, particularly in resolving blockers.
+Agile practices such as sprint planning and retrospectives have been used effectively to guide the process.
+The modular design of the code and structured approach to writing test cases ensured efficient code maintenance.
+
+What Could Be Improved:
+
+There was uneven workload distribution, leading to delays in some areas.
+The team struggled with over-committing to sprint goals without considering the capacity of each team member.
+Some issues arose with untested code being committed, which caused rework during the testing phase.
+More detailed edge case testing is needed to ensure robustness in the codebase.
+
+Action Plan for Improvement:
+
+Start:
+
+Documenting lessons learned during the sprint to avoid repeating mistakes in the future.
+Start writing comprehensive unit tests that cover edge cases to ensure robust code quality.
+Maintain a detailed error log to identify recurring issues during debugging.
+Add detailed comments to each section of code to improve readability and help team members understand functionality faster.
+
+Stop:
+
+Stop over-committing to sprint goals without considering the team's capacity.
+Stop relying solely on manual testing; automation of test execution will improve efficiency.
+Avoid committing untested code and ensure all code passes unit tests before submission.
+
+Continue:
+
+Continue using Agile practices like sprint planning and retrospectives effectively.
+Continue optimizing code structure and modular design to maintain efficiency and ease of maintenance.
+Continue using a structured approach to write clear and reusable test cases for better maintainability.
+Keep using systematic debugging techniques to isolate and resolve issues efficiently.
+
+Next Steps:
+
+Implement the improvements identified in the retrospective for the next sprint.
+Address feedback from the sprint review and incorporate it into the upcoming tasks.
+
+Minutes Prepared by: Prajwal

@@ -1,0 +1,23 @@
+{% extends 'app.html' %}
+
+{% block content %}
+<h1>Index page</h1>
+<h2>Requirements</h2>
+<ol>
+	<li>The system shall provide login functionality based on role</li>
+	<li>The system shall manage various leagues through the use of a database</li>
+	<li>The system shall have alerts regarding weather</li>
+	<li>The system shall support different types of sports leagues and their respective tiers</li>
+	<li>The system shall allow for league registration through an online payment system.</li>
+</ol>
+<h2>Specifications</h2>
+<ul>
+	<li>The database governing the system as a whole will be postgres</li>
+	<li>Alters for weather related notifications will be pushed asynchronously without page refresh.</li>
+	<li>Various leagues will be viewable on a paginated screen witht he ability to sort based on league tier and/or
+		sport</li>
+	<li>Payment systems will be conducted through stripe.</li>
+	<li>Login authentication will utilize a random salt and the md5 encryption algorithm</li>
+	<li>Authentication will support session management and JWT for remote access</li>
+</ul>
+{% endblock %}

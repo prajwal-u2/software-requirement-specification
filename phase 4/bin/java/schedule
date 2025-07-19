@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CASE="case1"
+if [[ -n "$1" ]]; then
+	CASE=$1
+fi

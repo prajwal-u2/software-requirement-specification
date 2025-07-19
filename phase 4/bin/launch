@@ -1,0 +1,13 @@
+#!/bin/bash
+git init
+ROOTDIR=`git rev-parse --show-toplevel`
+if [[ -z $1 ]]; then
+	export LANGUAGE="python"
+elif [[ "${1}" == "cpp" ]]; then
+	export LANGUAGE="cpp"
+elif [[ "${1}" == "java" ]]; then
+	export LANGUAGE="java"
+else
+	export LANGUAGE="python"
+fi
+python3 "${ROOTDIR}/main.py"

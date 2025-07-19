@@ -1,0 +1,43 @@
+Meeting Title: Sprint Planning - Task Assignment and Backlog Refinement
+Date: December 5, 2024
+Duration: 45 minutes
+
+* Attendees:
+Prajwal
+Poorna
+Haifeng Huang
+Wan Wang
+
+* Agenda:
+Task Tracking System Setup
+Refining Product Backlog
+Task Assignment for Current Sprint
+
+1. Task Tracking System Setup:
+A spreadsheet was created to track tasks efficiently.
+The following columns were added:
+Date Created
+Comments (to track updates and progress)
+Status (to monitor whether a task is completed, in progress, etc.)
+This system will help manage task progress and provide clarity on each task’s status.
+
+2. Refining Product Backlog:
+The product backlog was updated to include more detailed and clear tasks.
+Tasks were assigned to individual team members to ensure clarity and ownership.
+The sprint goal was reviewed, and the tasks needed to achieve it were prioritized.
+
+3. Task Assignment for Current Sprint:
+The main tasks for this sprint were outlined and given an initial status.
+Team members were assigned tasks based on their strengths and roles within the project.
+It was agreed that some tasks need further refinement and will be rewritten in the correct format for clarity.
+
+* Action Items:
+1. Refine Tasks:
+Review tasks and refine them further, ensuring they follow the correct format.
+2. Update Task Statuses:
+Ensure the tracking spreadsheet is updated regularly with task statuses.
+3. Next Steps:
+Each team member will begin working on the assigned tasks.
+We will meet again in the next daily scrum to evaluate the progress and address any blockers.
+
+Minutes Prepared by: Prajwal

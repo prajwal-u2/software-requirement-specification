@@ -1,0 +1,89 @@
+December 4th:
+	Sprint planning 
+December 5th:
+	Daily scrum 1
+December 6th:
+	Daily scrum 2
+December 8th:
+	Daily scrum 3
+December 9th:
+	Sprint Review
+	Sprint Retrospective
+
+Product Backlog:
+Product Backlog for SPORTS Version 0.1
+Epic 1: Basic Scheduling System Functionality
+1.	User Story: As an admin, I want to input the details of teams, venues, and schedules so that I can create a league schedule.
+o	Acceptance Criteria:
+	Admin can input the number of teams, venue details, and game days.
+	System validates input for missing or incorrect data.
+	Data is stored for schedule generation.
+o	Priority: High
+2.	User Story: As an admin, I want to generate a schedule for a league of teams so that games can be evenly distributed.
+o	Acceptance Criteria:
+	System generates schedules ensuring all teams have equal playing time.
+	Teams may play more than once on the same day (double-headers).
+	Schedule adapts to constraints (e.g., venue availability, team count).
+o	Priority: High
+ 
+Epic 2: Advanced Scheduling Scenarios
+4.	User Story: As an admin, I want to distribute game times and venues evenly across teams for competitive leagues.
+o	Acceptance Criteria:
+	Teams alternate between 6 PM and 7 PM slots.
+	Teams rotate between two specified venues.
+	No team plays consecutively in the same time slot or venue unless unavoidable.
+o	Priority: High
+5.	User Story: As an admin, I want to manage incomplete leagues where fewer teams have signed up so that the league can still run.
+o	Acceptance Criteria:
+	System generates a balanced schedule for fewer teams.
+	Unassigned slots are managed equitably.
+	Late registrations can be added to fill gaps.
+o	Priority: Medium
+ 
+Epic 3: Testing and Reporting
+6.	User Story: As a developer, I want unit tests for each module of the scheduling system so that code reliability is ensured.
+o	Acceptance Criteria:
+	Tests for input validation, schedule generation, and edge cases.
+	Coverage of at least 80% of the codebase.
+o	Priority: High
+7.	User Story: As a developer, I want to produce a test report showing results of all executed tests so that the testing process is documented.
+o	Acceptance Criteria:
+	Test report includes a table of tests, execution results, and findings.
+	All critical test cases pass successfully.
+o	Priority: Medium
+
+
+Sprint Backlog for SPORTS Version 0.1
+Sprint Goal
+Deliver a functional prototype that allows admins to input league data, generate schedules, and validate them while ensuring code reliability with basic unit tests.
+ 
+Tasks for Sprint 1
+Epic 1: Basic Scheduling System Functionality
+1.	Input Team, Venue, and Schedule Details
+o	Take input from existing teams.csv, league.csv and venue.csv files.
+o	Validate input for completeness and correctness.
+o	Store data in a database or structured file.
+2.	Generate Schedule
+o	Implement algorithm for even distribution of schedules.
+o	Allow optional support for double-headers.
+o	Handle constraints such as venue availability.
+ 
+Epic 3: Testing and Reporting
+3.	Unit Tests for Basic Scheduling Features
+o	Write tests for:
+	Input validation (e.g., missing data, incorrect formats).
+	Schedule generation logic.
+	Constraints validation (e.g., venue availability).
+o	Achieve 80% coverage for implemented features.
+4.	Generate Test Report
+o	Document test results in a report.
+o	Include summary of test coverage and any bugs found.
+ 
+Sprint Deliverables
+1.	Functional prototype with:
+o	Input forms for teams and venues.
+o	Working schedule generation.
+o	Validation of input and schedule constraints.
+2.	Unit test suite with test coverage report.
+3.	Test documentation highlighting coverage and results.
+

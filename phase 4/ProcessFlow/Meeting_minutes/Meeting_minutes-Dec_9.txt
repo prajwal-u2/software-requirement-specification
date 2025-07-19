@@ -1,0 +1,42 @@
+Meeting Title: Daily Scrum Meeting 3 - Scheduler Algorithm Updates and Sprint Review Preparation
+Date: December 8, 2024
+Duration: 15 minutes
+
+Attendees:
+•	Prajwal
+•	Poorna
+•	Haifeng Huang
+•	Wan Wang
+
+Agenda:
+•	Task Updates
+•	Algorithm Execution and Test Cases
+•	Requirements Review
+•	Sprint Review and Retrospective Preparation
+
+Meeting Discussion:
+
+Task Updates:
+•	The team successfully completed and fixed the scheduling algorithm.
+•	All default test cases were executed, and the results validated the algorithm's functionality.
+•	Requirements were updated to align with the finalized scheduling algorithm.
+
+Progress Check:
+•	With the algorithm operational and the default test cases passed, the team is on track to meet the sprint goal.
+•	Updates to the design and requirements documents reflect the changes made during implementation.
+
+Next Steps for Sprint Review and Retrospective:
+•	The team outlined actions needed to prepare for the sprint review, including compiling a summary of completed tasks and demonstrating the scheduler algorithm functionality.
+•	Planned points of discussion for the retrospective include challenges faced during algorithm design and lessons learned from resolving blockers.
+
+Action Items:
+•	Finalize updates to the requirements and design documents based on the algorithm changes.
+•	Prepare a detailed demonstration of the scheduler algorithm for the sprint review.
+•	Identify areas for improvement during the retrospective, such as refining requirement clarity and handling blockers.
+
+Next Steps:
+•	Continue refining documentation for sprint closure.
+•	Ensure readiness for the sprint review and retrospective discussions.
+•	Begin identifying tasks for the next sprint based on feedback and remaining project goals.
+
+Minutes Prepared by: Prajwal

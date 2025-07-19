@@ -1,0 +1,41 @@
+Meeting Title: Sprint Review
+Date: December 9, 2024
+Duration: 45 minutes
+
+Attendees:
+• Prajwal
+• Poorna
+• Haifeng Huang
+• Wan Wang
+
+Agenda:
+• Showcase of Work
+• Feedback and Discussions
+• Video Creation for User Demonstration
+
+Meeting Discussion:
+
+Task Updates:
+
+Each team member took turns showcasing their completed work for the sprint.
+The team demonstrated the finalized scheduler algorithm, design changes, and updated requirements, while the product owner reviewed the progress.
+Feedback was gathered from team members and the product owner, which helped identify areas for further improvement.
+
+Next Steps for Sprint Review:
+
+The team discussed how to create a video to present the work to users.
+Plans were made to highlight the key features and functionalities for an effective user demonstration.
+
+Action Items:
+
+Finalize video creation for the user demo and ensure it addresses all the main features.
+Integrate feedback into future development tasks and refine the features demonstrated.
+Continue working on any unfinished tasks and align them with the feedback provided in the sprint review.
+
+Next Steps:
+
+Work on preparing a detailed user demo video and prepare to incorporate user feedback into the next sprint.
+Keep track of feedback from the sprint review and plan accordingly for the next sprint.
+
+Minutes Prepared by: Prajwal
+
